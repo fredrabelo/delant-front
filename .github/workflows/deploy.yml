@@ -1,0 +1,59 @@
+name: Deploy frontend para ECS
+
+# Nuxt com SSR (node .output/server/index.mjs), então vira um serviço ECS,
+# não um bucket S3.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_REGION: sa-east-1
+      ECR_REPOSITORY: delant-app
+      ECS_CLUSTER: teamlit
+      ECS_SERVICE: delant-app
+      CONTAINER_NAME: delant-app
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar credenciais da AWS
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Login no Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Build e push da imagem Docker
+        run: |
+          IMAGE_TAG=${{ github.sha }}
+          IMAGE_URI=${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG
+          LATEST_URI=${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+
+          docker build -t $IMAGE_URI -t $LATEST_URI .
+
+          docker push ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:$IMAGE_TAG
+          docker push ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:latest
+
+      - name: Obter última Task Definition
+        id: task-def
+        run: |
+          TASK_DEFINITION=$(aws ecs list-task-definitions --family task-${{ env.ECS_SERVICE }} --query "taskDefinitionArns[-1]" --output text)
+          echo "TASK_DEFINITION=$TASK_DEFINITION" >> $GITHUB_ENV
+
+      - name: Atualizar o serviço ECS
+        run: |
+          aws ecs update-service \
+            --cluster $ECS_CLUSTER \
+            --service $ECS_SERVICE \
+            --task-definition $TASK_DEFINITION \
+            --force-new-deployment
