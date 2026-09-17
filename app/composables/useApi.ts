@@ -81,10 +81,21 @@ export function useApi() {
   }
 
   function normalizeError(err: unknown): ApiError {
-    const anyErr = err as { status?: number; statusCode?: number; message?: string; data?: unknown }
+    const anyErr = err as {
+      status?: number
+      statusCode?: number
+      message?: string
+      data?: { message?: string | string[] } | unknown
+    }
+    // ofetch's own `.message` is a generic summary (`"[POST] \"url\": 404"`)
+    // — the actual, useful message Nest sends lives in the JSON error body
+    // at `.data.message` (string, or string[] for class-validator errors).
+    // Prefer that; fall back to ofetch's summary only when the body has none.
+    const bodyMessage = (anyErr?.data as { message?: string | string[] } | undefined)?.message
+    const message = Array.isArray(bodyMessage) ? bodyMessage.join(', ') : bodyMessage
     return {
       status: anyErr?.status ?? anyErr?.statusCode ?? 0,
-      message: anyErr?.message ?? 'Request failed',
+      message: message ?? anyErr?.message ?? 'Request failed',
       data: anyErr?.data,
     }
   }
