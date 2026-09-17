@@ -1032,7 +1032,8 @@
     "llm_provider": {
       "anthropic": "Anthropic",
       "gemini": "Gemini",
-      "openai": "OpenAI"
+      "openai": "OpenAI",
+      "bedrock": "Bedrock"
     }
   }
 }
