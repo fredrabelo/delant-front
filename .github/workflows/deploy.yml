@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AWS_REGION: sa-east-1
+      AWS_REGION: us-east-1
       ECR_REPOSITORY: delant-app
       ECS_CLUSTER: teamlit
       ECS_SERVICE: delant-app
