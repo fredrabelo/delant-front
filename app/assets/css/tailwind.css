@@ -1,0 +1,309 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+/* Dark mode is class-driven (`.dark` on <html>), same as the v3 setup. */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Design tokens — Delant brand: black, gray, off-white and #312CFD blue.
+ *
+ * Raw HSL values live in :root/.dark below, and the `@theme inline` block
+ * exposes them to Tailwind as `--color-*` utilities (bg-primary,
+ * text-muted-foreground, border-sidebar-border, ...). Square corners
+ * (--radius: 0) and WCAG-tuned semantics are unchanged — only the neutral
+ * ramp (now true grayscale) and the brand hue (ultramarine → #312CFD)
+ * changed. Chart series still read via composables/useChartColors.
+ */
+@theme inline {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-data: var(--data);
+  --color-data-foreground: var(--data-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Cool neutral "ink" ramp — hierarchy beyond the semantic tokens. */
+  --color-ink-50: var(--ink-50);
+  --color-ink-100: var(--ink-100);
+  --color-ink-200: var(--ink-200);
+  --color-ink-300: var(--ink-300);
+  --color-ink-400: var(--ink-400);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --color-ink-950: var(--ink-950);
+
+  /* Sidebar surface (new, for the dashboard shell) — tuned to the ink palette. */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Chart series (consumed by useChartColors.ts). */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Square-corner shadows: short-throw, true black. */
+  --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+  --shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.06), 0 1px 3px 0 hsl(0 0% 0% / 0.04);
+  --shadow-md: 0 2px 4px -1px hsl(0 0% 0% / 0.07), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+  --shadow-lg: 0 6px 12px -3px hsl(0 0% 0% / 0.09), 0 2px 4px -2px hsl(0 0% 0% / 0.05);
+  --shadow-xl: 0 12px 24px -6px hsl(0 0% 0% / 0.11), 0 4px 8px -4px hsl(0 0% 0% / 0.06);
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-collapsible-down: collapsible-down 0.2s ease-in-out;
+  --animate-collapsible-up: collapsible-up 0.2s ease-in-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--reka-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--reka-accordion-content-height); }
+    to { height: 0; }
+  }
+  @keyframes collapsible-down {
+    from { height: 0; }
+    to { height: var(--reka-collapsible-content-height); }
+  }
+  @keyframes collapsible-up {
+    from { height: var(--reka-collapsible-content-height); }
+    to { height: 0; }
+  }
+}
+
+:root {
+  /* True neutral "ink" ramp — anchored at #666666 (500) and #000000 (950). */
+  --ink-50: hsl(0 0% 98%);
+  --ink-100: hsl(0 0% 95%);
+  --ink-200: hsl(0 0% 90%);
+  --ink-300: hsl(0 0% 82%);
+  --ink-400: hsl(0 0% 60%);
+  --ink-500: hsl(0 0% 40%);
+  --ink-600: hsl(0 0% 30%);
+  --ink-700: hsl(0 0% 22%);
+  --ink-800: hsl(0 0% 14%);
+  --ink-900: hsl(0 0% 7%);
+  --ink-950: hsl(0 0% 0%);
+
+  --background: hsl(0 0% 99%);
+  --foreground: hsl(0 0% 0%);
+  --card: hsl(0 0% 99%);
+  --card-foreground: hsl(0 0% 0%);
+  --popover: hsl(0 0% 99%);
+  --popover-foreground: hsl(0 0% 0%);
+
+  /* #312CFD — the brand voice. */
+  --primary: hsl(241 98% 58%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(0 0% 95%);
+  --secondary-foreground: hsl(0 0% 0%);
+  --muted: hsl(0 0% 95%);
+  --muted-foreground: hsl(0 0% 40%);
+  --accent: hsl(241 100% 96%);
+  --accent-foreground: hsl(241 90% 40%);
+
+  /* Semantics, designed together, each clearing WCAG AA. */
+  --success: hsl(158 64% 29%);
+  --success-foreground: hsl(0 0% 100%);
+  --warning: hsl(30 85% 34%);
+  --warning-foreground: hsl(0 0% 100%);
+  --destructive: hsl(352 70% 47%);
+  --destructive-foreground: hsl(0 0% 100%);
+
+  /* Teal counterpoint for data/measurement contexts. */
+  --data: hsl(187 72% 30%);
+  --data-foreground: hsl(0 0% 100%);
+
+  --border: hsl(0 0% 89%);
+  --input: hsl(0 0% 85%);
+  --ring: hsl(241 98% 58%);
+
+  --radius: 0rem;
+
+  /* Chart series — brand-blue-anchored progression. */
+  --chart-1: hsl(241 98% 58%);
+  --chart-2: hsl(187 72% 30%);
+  --chart-3: hsl(158 64% 29%);
+  --chart-4: hsl(30 85% 34%);
+  --chart-5: hsl(280 50% 45%);
+
+  /* Sidebar — reads as a related, neutral surface. */
+  --sidebar: hsl(0 0% 96%);
+  --sidebar-foreground: hsl(0 0% 0%);
+  --sidebar-primary: hsl(241 98% 58%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(241 100% 96%);
+  --sidebar-accent-foreground: hsl(241 90% 40%);
+  --sidebar-border: hsl(0 0% 89%);
+  --sidebar-ring: hsl(241 98% 58%);
+}
+
+.dark {
+  --ink-50: hsl(0 0% 7%);
+  --ink-100: hsl(0 0% 12%);
+  --ink-200: hsl(0 0% 18%);
+  --ink-300: hsl(0 0% 26%);
+  --ink-400: hsl(0 0% 45%);
+  --ink-500: hsl(0 0% 60%);
+  --ink-600: hsl(0 0% 70%);
+  --ink-700: hsl(0 0% 80%);
+  --ink-800: hsl(0 0% 88%);
+  --ink-900: hsl(0 0% 94%);
+  --ink-950: hsl(0 0% 99%);
+
+  --background: hsl(0 0% 0%);
+  --foreground: hsl(0 0% 99%);
+  --card: hsl(0 0% 7%);
+  --card-foreground: hsl(0 0% 99%);
+  --popover: hsl(0 0% 7%);
+  --popover-foreground: hsl(0 0% 99%);
+
+  --primary: hsl(241 100% 68%);
+  --primary-foreground: hsl(0 0% 8%);
+  --secondary: hsl(0 0% 16%);
+  --secondary-foreground: hsl(0 0% 99%);
+  --muted: hsl(0 0% 16%);
+  --muted-foreground: hsl(0 0% 65%);
+  --accent: hsl(241 40% 20%);
+  --accent-foreground: hsl(241 90% 85%);
+
+  --success: hsl(158 52% 46%);
+  --success-foreground: hsl(0 0% 8%);
+  --warning: hsl(33 82% 58%);
+  --warning-foreground: hsl(0 0% 8%);
+  --destructive: hsl(352 68% 60%);
+  --destructive-foreground: hsl(0 0% 8%);
+
+  --data: hsl(187 60% 48%);
+  --data-foreground: hsl(0 0% 8%);
+
+  --border: hsl(0 0% 20%);
+  --input: hsl(0 0% 23%);
+  --ring: hsl(241 100% 68%);
+
+  --chart-1: hsl(241 100% 68%);
+  --chart-2: hsl(187 60% 48%);
+  --chart-3: hsl(158 52% 46%);
+  --chart-4: hsl(33 82% 58%);
+  --chart-5: hsl(280 55% 65%);
+
+  --sidebar: hsl(0 0% 7%);
+  --sidebar-foreground: hsl(0 0% 99%);
+  --sidebar-primary: hsl(241 100% 68%);
+  --sidebar-primary-foreground: hsl(0 0% 8%);
+  --sidebar-accent: hsl(241 40% 20%);
+  --sidebar-accent-foreground: hsl(241 90% 85%);
+  --sidebar-border: hsl(0 0% 20%);
+  --sidebar-ring: hsl(241 100% 68%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Quantitative UI: figures line up in columns wherever numbers are compared. */
+  table,
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background-color: hsl(241 98% 58% / 0.18);
+    color: var(--foreground);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-foreground;
+    letter-spacing: -0.011em;
+  }
+}
+
+@layer components {
+  /*
+   * Native <select> field treatment, matching <Input>, with a custom chevron.
+   */
+  .field-select {
+    @apply flex h-10 w-full appearance-none border border-input bg-background bg-no-repeat py-2 pl-3 pr-9 text-sm shadow-sm transition-colors;
+    @apply hover:border-ink-300 focus-visible:border-ring focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background;
+    @apply disabled:cursor-not-allowed disabled:opacity-50;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-position: right 0.65rem center;
+    background-size: 1rem;
+  }
+
+  .field-select-sm {
+    @apply h-9 py-1.5 text-sm;
+  }
+
+  /* A measured figure inside a card — recessed tint + ink top rule. */
+  .stat-tile {
+    @apply border border-t-2 border-t-primary bg-muted/50 p-4;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,1038 @@
+{
+  "app": {
+    "title": "{name}",
+    "welcome": "Welcome to {name}"
+  },
+  "nav": {
+    "primary": "Primary navigation",
+    "workspace": "Workspace",
+    "settings": "Settings",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "researches": "Researches",
+    "populations": "Populations",
+    "builder": "Experiment builder",
+    "newExperiment": "New experiment",
+    "channels": "Channels",
+    "team": "Team",
+    "llm": "LLM",
+    "usage": "Usage & cost",
+    "dataSources": "Data sources",
+    "admin": "Admin",
+    "adminClients": "Organizations",
+    "adminDataSources": "Data sources",
+    "adminChannels": "Diffusion channels"
+  },
+  "common": {
+    "language": "Language",
+    "hello": "Hello",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "select": "Select...",
+    "create": "Create",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "back": "Back",
+    "actions": "Actions",
+    "yes": "Yes",
+    "no": "No",
+    "saving": "Saving…",
+    "saved": "Saved"
+  },
+  "llmConfirm": {
+    "title": "Confirm LLM call",
+    "subtitle": "Nothing is sent to the provider until you confirm here.",
+    "mode": "Execution mode",
+    "modeValue": {
+      "sync": "Sync (direct call, more expensive)",
+      "batch": "Batch (provider Batches API, ~50% cheaper)",
+      "analysis": "Synthesis (1 call)"
+    },
+    "model": "Model",
+    "calls": "LLM calls",
+    "estCost": "Estimated cost",
+    "confirm": "Confirm and run"
+  },
+  "auth": {
+    "logout": "Log out",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "password": "Password"
+    },
+    "login": {
+      "title": "Sign in",
+      "subtitle": "Access your account to continue.",
+      "submit": "Sign in",
+      "noAccount": "Don't have an account?"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Sign up to get started.",
+      "submit": "Sign up",
+      "hasAccount": "Already have an account?"
+    }
+  },
+  "dashboard": {
+    "title": "{name}",
+    "welcome": "Welcome, {name}",
+    "links": {
+      "researches": "Manage your researches and studies.",
+      "populations": "Synthesize and manage populations.",
+      "builder": "Set up a full experiment step by step.",
+      "team": "Manage members and permissions."
+    },
+    "slogan": "Not a single answer. The direction your population points to.",
+    "llmKeyBanner": {
+      "title": "Add your LLM API key to run experiments",
+      "body": "Runs and analyses for this client use your own Anthropic, OpenAI or Gemini key — nothing runs until at least one is configured.",
+      "action": "Configure key"
+    },
+    "howItWorks": {
+      "trigger": "How it works",
+      "title": "How {name} works",
+      "intro": "{name} runs your questions against a synthetic population — thousands of simulated respondents calibrated to real demographic data — so you can see how people would likely react before you spend a single dollar on a real panel.",
+      "sections": {
+        "population": {
+          "title": "A calibrated population, not a guess",
+          "body": "Each simulated respondent (\"agent\") carries real demographic and behavioral attributes — age, income, region, attitudes — built to match the composition of your target population. You can audit that composition at any time, comparing the simulated shares against the real shares of your source axes."
+        },
+        "direction": {
+          "title": "The answer is never \"A\", \"B\" or \"C\"",
+          "body": "When we put a question to the synthetic panel, we don't ask for — or trust — a single \"correct\" answer. Just like a real survey, we aggregate hundreds or thousands of independent responses and report the statistical distribution: which option gathered more support, what direction an effect moved between groups, and how reliable that difference is. The platform never states an answer as \"the truth\" — it shows the direction and strength of the signal, with the caveats that belong to it."
+        },
+        "flow": {
+          "title": "From draft to result",
+          "body": "Define your target population, your stimulus and your response instrument, run the experiment, and get back real statistics plus an AI-written narrative that never invents a number — it only explains what has already been computed."
+        }
+      }
+    }
+  },
+  "clients": {
+    "active": "Active client",
+    "switcher": "Switch client",
+    "none": "No client",
+    "fields": {
+      "name": "Name",
+      "sector": "Sector",
+      "legalName": "Legal name",
+      "country": "Country"
+    },
+    "create": {
+      "title": "Create a client",
+      "subtitle": "You don't belong to any client yet. Create your first one.",
+      "submit": "Create client"
+    }
+  },
+  "researches": {
+    "title": "Researches",
+    "subtitle": "Your research questions and the studies under each.",
+    "new": "New research",
+    "empty": "No researches found.",
+    "columns": {
+      "name": "Name",
+      "status": "Status",
+      "created": "Created"
+    },
+    "fields": {
+      "department": "Department",
+      "country": "Country",
+      "name": "Name",
+      "objective": "Objective"
+    },
+    "llmOverride": {
+      "title": "AI analysis model",
+      "subtitle": "Overrides the platform default for this research's AI analysis (run, study and research levels). Leave unset to use the platform default.",
+      "provider": "Provider",
+      "model": "Model",
+      "usePlatformDefault": "Platform default",
+      "clear": "Clear override",
+      "currentlyUsing": "Currently using: {provider} / {model}",
+      "currentlyUsingPlatformDefault": "Currently using the platform default (see Settings → LLM)."
+    }
+  },
+  "studies": {
+    "title": "Studies",
+    "heading": "Studies",
+    "new": "New study",
+    "empty": "No studies found.",
+    "columns": {
+      "name": "Name",
+      "status": "Status",
+      "exposureMode": "Exposure mode",
+      "created": "Created",
+      "progress": "Progress"
+    },
+    "fields": {
+      "name": "Name",
+      "description": "Description",
+      "exposureMode": "Exposure mode"
+    },
+    "attach": {
+      "title": "Populations",
+      "subtitle": "Populations linked to this study. The same population can serve several studies.",
+      "submit": "Attach",
+      "attached": "Attached",
+      "none": "No population attached yet.",
+      "addAnother": "Attach a population",
+      "detach": "Detach",
+      "agentsCount": "{n} agents"
+    },
+    "progress": {
+      "runs": "runs",
+      "events": "opinions"
+    }
+  },
+  "dataSources": {
+    "catalog": {
+      "title": "Data sources",
+      "subtitle": "Browse the population data sources you can build from.",
+      "country": "Country",
+      "none": "No data sources for this country.",
+      "public": "public",
+      "private": "private",
+      "geographic": "state / city",
+      "national": "national",
+      "confidence": "Confidence",
+      "quality": "Quality",
+      "onDemand": "on-demand cities",
+      "viewAxes": "View axes",
+      "hideAxes": "Hide axes",
+      "axes": "Axes",
+      "noAxes": "No axes in this source.",
+      "createPopulation": "Create population"
+    }
+  },
+  "admin": {
+    "dataSources": {
+      "title": "Data sources",
+      "subtitle": "Create and manage the population data sources available to clients.",
+      "existing": "Existing sources",
+      "none": "No data sources yet.",
+      "public": "public",
+      "private": "private",
+      "publish": "Publish",
+      "create": "New data source",
+      "createButton": "Create source",
+      "key": "Key",
+      "organization": "Organization",
+      "namePt": "Name (PT)",
+      "nameEn": "Name (EN)",
+      "descriptionPt": "Description (PT)",
+      "descriptionEn": "Description (EN)",
+      "sourceType": "Source type",
+      "country": "Country",
+      "universal": "Universal (all countries)",
+      "geographyScope": "Geographic scope",
+      "onDemandProvider": "On-demand provider",
+      "onDemandHint": "Set (e.g. ibge_sidra) to let researchers self-fetch cities. Leave empty for curated.",
+      "referencePeriod": "Reference period",
+      "license": "License",
+      "homepage": "Homepage URL",
+      "confidence": "Confidence (0–1)",
+      "quality": "Quality (0–1)",
+      "isOfficial": "Public (visible to all clients)"
+    },
+    "channels": {
+      "title": "Diffusion channels",
+      "subtitle": "Create and manage the calibrated diffusion-channel catalog, available to every client.",
+      "existing": "Existing channels",
+      "none": "No channel yet.",
+      "official": "official",
+      "private": "private",
+      "publish": "Publish",
+      "create": "New channel",
+      "createButton": "Create channel",
+      "key": "Key",
+      "family": "Family",
+      "labelPt": "Label (PT)",
+      "labelEn": "Label (EN)",
+      "defaultReach": "Default reach (0–1)",
+      "defaultDiffusionRate": "Default diffusion rate (0–1)",
+      "isOfficial": "Official (visible to every client)"
+    },
+    "clients": {
+      "title": "Organizations",
+      "subtitle": "Every org (client) on the platform — create new ones, manage members, and check who's using it.",
+      "detailSubtitle": "Members, invites and access log for this org.",
+      "existing": "Organizations",
+      "none": "No organization yet.",
+      "viewMembers": "View members",
+      "deactivate": "Deactivate",
+      "reactivate": "Reactivate",
+      "create": "New organization",
+      "createButton": "Create organization",
+      "ownerEmail": "Owner email (optional)",
+      "ownerEmailHint": "Must already have a delant account. Leave empty to become the owner yourself.",
+      "members": "Members",
+      "newAccount": "This person doesn't have an account yet",
+      "newAccountPassword": "Temporary password",
+      "newAccountPasswordHint": "Share this with them yourself — there's no invite email yet. They can change it later.",
+      "accessLog": "Access log",
+      "accessLogEmpty": "No access recorded yet."
+    }
+  },
+  "populations": {
+    "title": "Populations",
+    "subtitle": "Synthetic populations ready to attach to studies.",
+    "new": "New population",
+    "empty": "No populations found.",
+    "generating": "Generating population...",
+    "errorTitle": "Generation failed",
+    "columns": {
+      "name": "Name",
+      "status": "Status",
+      "agentCount": "Agents"
+    },
+    "fields": {
+      "name": "Name",
+      "size": "Size",
+      "country": "Country",
+      "geography": "Geography",
+      "synthesizer": "Synthesizer",
+      "seed": "Seed",
+      "seedHint": "Fixes the random draw so the same inputs reproduce the same agents. Leave as is unless you need a different roster."
+    },
+    "builder": {
+      "title": "Population builder",
+      "subtitle": "Pick a country, axes, attributes and size to synthesize a population.",
+      "step1": "1. Country and data sources",
+      "step2": "2. Axes",
+      "step3": "3. Size and settings",
+      "dataSources": "Data sources",
+      "dataSourcesHint": "Pick one or more sources (e.g. IBGE, or your own). Their axes appear below.",
+      "noDataSources": "No data sources for this country.",
+      "sourcePublic": "public",
+      "sourcePrivate": "private",
+      "selectSourceFirst": "Select at least one data source.",
+      "noAttributes": "No axes available.",
+      "state": "State",
+      "city": "City",
+      "wholeState": "Whole state",
+      "noCities": "No cities imported yet for this state.",
+      "findCity": "+ Fetch a city (IBGE)",
+      "findCityHint": "Search a municipality; we pull its Census data on demand and cache it for everyone.",
+      "findCityPlaceholder": "Type a city name…",
+      "cityFetchStarting": "Starting fetch…",
+      "cityFetchProgress": "Fetching from IBGE… {p}%",
+      "cityFetchFailed": "The IBGE fetch failed. Try again.",
+      "wholeCountry": "Whole country",
+      "geographyHint": "Used for each axis's target % and the population's real size.",
+      "generate": "Generate population",
+      "addCustomAxis": "+ Create custom axis",
+      "axisKey": "Axis key",
+      "axisKeyHint": "e.g. household_income",
+      "axisLabelPt": "Label (PT-BR)",
+      "axisLabelEn": "Label (EN-US)",
+      "axisValues": "Possible values",
+      "axisValueKey": "Value key",
+      "addAxisValue": "+ Add value",
+      "createAxis": "Create axis",
+      "compositionPreview": "Population composition (target % per axis)",
+      "targetShare": "Target %",
+      "noTargetShare": "No reference % for this axis (custom axis, or no source data)."
+    },
+    "composition": {
+      "title": "Population composition",
+      "subtitle": "Observed % per axis, against the source target (goodness-of-fit audit).",
+      "noAudit": "No target to audit against",
+      "empty": "No axis with attributes on this population yet."
+    },
+    "agents": {
+      "title": "People and profiles",
+      "subtitle": "{total} agents generated. Check whether the profiles match the source axes.",
+      "id": "Agent",
+      "empty": "No agents found.",
+      "pageInfo": "{from}–{to} of {total}",
+      "next": "Next"
+    }
+  },
+  "stimuli": {
+    "title": "Stimuli",
+    "subtitle": "Content pieces presented to agents in this study.",
+    "new": "New stimulus",
+    "empty": "No stimuli found.",
+    "invalidJson": "Payload must be valid JSON.",
+    "payloadHint": "Optional JSON, e.g. {'{'} \"color\": \"blue\" {'}'}",
+    "fields": {
+      "title": "Title",
+      "body": "Body",
+      "payload": "Payload (JSON)"
+    }
+  },
+  "instruments": {
+    "title": "Instruments",
+    "subtitle": "Questionnaires and measurement items applied during a run.",
+    "new": "New instrument",
+    "empty": "No instruments found.",
+    "showItems": "Show items",
+    "hideItems": "Hide items",
+    "noItems": "No items in this instrument.",
+    "fields": {
+      "name": "Name",
+      "description": "Description",
+      "itemType": "Item type",
+      "itemKey": "Item key",
+      "promptText": "Prompt text",
+      "required": "Required",
+      "min": "Minimum",
+      "max": "Maximum",
+      "options": "Options",
+      "optionKey": "Key",
+      "optionLabel": "Label",
+      "stimuli": "Stimuli"
+    },
+    "builder": {
+      "title": "Instrument builder",
+      "items": "Items",
+      "item": "Item",
+      "addItem": "Add item",
+      "addOption": "Add option",
+      "noOptions": "No options added.",
+      "noStimuli": "Add stimuli first to use conjoint choice."
+    }
+  },
+  "runs": {
+    "title": "Runs",
+    "subtitle": "Configure, freeze and track study runs.",
+    "new": "New run",
+    "empty": "No runs found.",
+    "open": "Open",
+    "tabs": {
+      "overview": "Overview",
+      "statistics": "Statistics",
+      "visualizations": "Visualizations",
+      "diffusion": "Diffusion",
+      "diffusionCompare": "Compare opinions"
+    },
+    "freeze": "Freeze",
+    "freezeHint": "Freezes this run's snapshot (populations, stimuli and settings).",
+    "fields": {
+      "name": "Name",
+      "groundingCompiler": "Grounding compiler",
+      "llmProvider": "LLM provider",
+      "llmModel": "LLM model",
+      "instrument": "Instrument",
+      "seed": "Seed",
+      "timelineOffsetDays": "Days from D0",
+      "timelineOffsetDaysHint": "This run's position on the study's diffusion timeline (0 = D0)."
+    },
+    "manifest": {
+      "title": "Frozen snapshot",
+      "populations": "Populations",
+      "stimuli": "Stimuli",
+      "frozenAt": "Frozen at"
+    },
+    "execution": {
+      "title": "Execution",
+      "statusLabel": "Status",
+      "execute": "Execute run",
+      "reRun": "Re-run",
+      "executing": "Executing...",
+      "progress": "Progress",
+      "errorInfo": "The run finished with a message from the server:",
+      "modeBatch": "Batch (default, ~50% cheaper)",
+      "modeSync": "Synchronous (advanced, more expensive)"
+    },
+    "cost": {
+      "title": "Cost estimate",
+      "subtitle": "Estimated cost before running, based on the frozen manifest.",
+      "estimate": "Estimate cost",
+      "calls": "LLM calls",
+      "callsBreakdown": "{agents} agents x {items} items",
+      "estTokens": "Est. tokens",
+      "estSync": "Est. cost (sync)",
+      "estBatch": "Est. cost (batch)"
+    },
+    "batch": {
+      "title": "Batch execution",
+      "subtitle": "Cheaper path for large runs via the provider Batches API (~50% off).",
+      "submit": "Submit batch",
+      "poll": "Check status",
+      "statusLabel": "Batch"
+    },
+    "responses": {
+      "title": "Responses",
+      "view": "View responses",
+      "agent": "Agent",
+      "question": "Question",
+      "value": "Value",
+      "explanation": "Explanation",
+      "cappedNote": "Capped at 200 rows.",
+      "count": "{n} responses",
+      "empty": "No responses found."
+    },
+    "runAll": {
+      "trigger": "Run all",
+      "title": "Run all",
+      "subtitle": "Runs every frozen run in this study at once — shows the total cost before any LLM call.",
+      "item": "Item",
+      "total": "Total",
+      "nothingToRun": "Nothing ready to run yet (no frozen runs, or the channels haven't been diffused yet).",
+      "skipped": "Skipped",
+      "skippedNoExposure": "\"{title}\" hasn't had diffusion run yet",
+      "started": "Started! Track progress on the run or the diffusion event.",
+      "confirm": "Confirm and run ({n})",
+      "startedBatch": "Submitted as a batch! Track status on each run or diffusion event (can take up to 24h).",
+      "useSync": "Use synchronous instead of batch (advanced, more expensive, faster)"
+    },
+    "checkAll": {
+      "trigger": "Check all",
+      "title": "Check all",
+      "subtitle": "Checks the status of every batch in flight (runs and diffusion events) and imports results as they land.",
+      "nothingPending": "No batch in flight right now.",
+      "confirm": "Refresh status ({n} pending)",
+      "itemFailed": "Failed this attempt"
+    },
+    "eventProgress": "{done}/{total} opinions ready",
+    "excluded": "Excluded from synthesis",
+    "exclude": "Exclude",
+    "include": "Include"
+  },
+  "statistics": {
+    "title": "Statistics",
+    "subtitle": "Run analysis modules over this run.",
+    "run": "Run",
+    "requiresResponses": "Requires an executed run with LLM responses.",
+    "exportCsv": "Export CSV",
+    "exportJson": "Export JSON",
+    "pValue": "p-value",
+    "notDistinguishable": "Not statistically distinguishable",
+    "distinguishable": "Statistically distinguishable",
+    "computed": "Analysis computed.",
+    "columns": {
+      "valueKey": "Value",
+      "observedShare": "Observed",
+      "targetShare": "Target",
+      "diff": "Diff",
+      "withinMargin": "Within margin",
+      "count": "Count",
+      "share": "Share",
+      "n": "N"
+    },
+    "status": {
+      "no_benchmark": "No human benchmark imported for this study yet.",
+      "no_responses": "This run has no responses to analyze yet.",
+      "no_attributes": "This run has responses but its agents carry no attributes to group by.",
+      "not_applicable": "Not applicable to this run.",
+      "insufficient_pairs": "Not enough paired numeric answers to compute.",
+      "insufficient_attributes": "Needs at least two attributes to cross.",
+      "no_common_questions": "No questions in common between human and synthetic data.",
+      "no_population": "This run has no population.",
+      "no_opinions": "Generate opinions on this run's events before comparing channels.",
+      "single_channel": "Need at least two channels to compare; this run diffused through one."
+    },
+    "decisionFidelity": {
+      "headline": "agrees on {agree} of {total} questions",
+      "human": "Human winner",
+      "synthetic": "Synthetic winner",
+      "agree": "Agrees"
+    },
+    "responseFidelity": {
+      "headline": "mean Pearson correlation (human vs synthetic)",
+      "r": "Correlation r"
+    },
+    "bootstrap": {
+      "headline": "mean absolute error, 95% CI [{low}, {high}]"
+    },
+    "drivers": {
+      "attribute": "Attribute",
+      "etaSquared": "eta squared"
+    },
+    "amce": {
+      "positive": "Positive outcome: {outcome}",
+      "effect": "AMCE"
+    },
+    "crossProfile": {
+      "headline": "{a} x {b} - share of “{outcome}” per cell",
+      "modalShare": "Modal share"
+    },
+    "segmentBreakdown": {
+      "headline": "Segmenting by: {attribute}"
+    },
+    "channelSegment": {
+      "headline": "Segmenting by: {attribute}",
+      "winner": "Winner: {channel}",
+      "meanAdoption": "Mean adoption intent"
+    },
+    "segmentPicker": {
+      "label": "Segment by"
+    }
+  },
+  "visualizations": {
+    "title": "Visualizations",
+    "subtitle": "Build charts from the computed analyses.",
+    "create": "New visualization",
+    "empty": "No visualizations created.",
+    "needComputed": "Compute an analysis before creating a visualization.",
+    "attributeHint": "Attribute key (optional)",
+    "fields": {
+      "title": "Title",
+      "analysisModule": "Analysis module",
+      "chartType": "Chart type",
+      "attributeKey": "Attribute"
+    },
+    "chart": {
+      "noData": "No data to display."
+    }
+  },
+  "llm": {
+    "title": "LLM",
+    "subtitle": "Language model status and providers.",
+    "statusTitle": "LLM status",
+    "statusSubtitle": "Indicates whether LLM calls are enabled on this server.",
+    "enabled": "Enabled",
+    "disabled": "Disabled",
+    "disabledNote": "LLM is disabled by default. No external calls are made until it is enabled server-side via LLM_ENABLED in the .env.",
+    "providers": "Providers",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "modelsTitle": "Providers and models",
+    "noModels": "No models listed.",
+    "columns": {
+      "model": "Model",
+      "pricing": "Pricing",
+      "purpose": "Purpose",
+      "provider": "Provider"
+    },
+    "defaultsTitle": "Defaults per purpose",
+    "defaultsSubtitle": "The provider/model used when a research, study or run doesn't set its own override. Changing a default here takes effect on the next run — it never rewrites past results.",
+    "editRequiresAdmin": "Only client owners and admins can change these defaults.",
+    "unconfirmedPricingSuffix": "(estimated — not yet confirmed with the provider)",
+    "purposes": {
+      "ai_analysis_run": {
+        "label": "AI analysis — run level",
+        "hint": "Narrative synthesis generated for a single study run."
+      },
+      "ai_analysis_study": {
+        "label": "AI analysis — study level",
+        "hint": "Narrative synthesis generated across a study's runs."
+      },
+      "ai_analysis_research": {
+        "label": "AI analysis — research level",
+        "hint": "Final narrative synthesis across the whole research."
+      },
+      "study_run": {
+        "label": "Study run execution",
+        "hint": "Model used to answer instrument items when a run is frozen without an explicit provider/model."
+      }
+    },
+    "credentials": {
+      "title": "API keys",
+      "subtitle": "Your own key for each provider — runs and analyses on this client bill against it, never the platform's.",
+      "editRequiresAdmin": "Only client owners and admins can manage API keys.",
+      "configured": "Configured",
+      "notConfigured": "Not configured",
+      "lastFour": "Ends in {lastFour}",
+      "updatedAt": "Updated {date}",
+      "placeholder": "Paste the API key",
+      "save": "Save",
+      "saved": "Saved",
+      "remove": "Remove",
+      "removeConfirm": "Remove this key? Runs for this client will stop working until a new one is set.",
+      "notSupported": "Not supported for BYO key yet — this provider still uses the platform's own credentials."
+    }
+  },
+  "usage": {
+    "title": "Usage & cost",
+    "subtitle": "Token consumption and estimated cost for this run.",
+    "totalCost": "Total cost",
+    "calls": "Calls",
+    "inputTokens": "Input tokens",
+    "outputTokens": "Output tokens",
+    "byModel": "By model",
+    "byPurpose": "By purpose",
+    "provider": "Provider",
+    "model": "Model",
+    "purpose": "Purpose",
+    "from": "From",
+    "to": "To",
+    "allProviders": "All providers",
+    "apply": "Apply",
+    "clear": "Clear",
+    "empty": "No usage recorded yet for the selected filters.",
+    "clientTitle": "Client usage & cost",
+    "clientSubtitle": "Aggregated token consumption and cost across everything this client has run."
+  },
+  "team": {
+    "title": "Team",
+    "members": "Members",
+    "empty": "No members found.",
+    "columns": {
+      "user": "User",
+      "role": "Role",
+      "department": "Department"
+    },
+    "fields": {
+      "email": "Email",
+      "role": "Role",
+      "department": "Department"
+    },
+    "invite": {
+      "title": "Add member",
+      "submit": "Add",
+      "emailHint": "They need to already have a delant account (sign up first) — adding them here doesn't send an invite email yet."
+    }
+  },
+  "channels": {
+    "title": "Channels",
+    "subtitle": "Diffusion channels and vectors — marketing (TikTok, TV) or not (internal rumor, word of mouth) — used in channel-diffusion studies.",
+    "new": "New channel",
+    "empty": "No channels found.",
+    "fields": {
+      "channelKey": "Channel key",
+      "family": "Family",
+      "defaultReach": "Default reach",
+      "labelPt": "Label (pt-BR)",
+      "labelEn": "Label (en-US)",
+      "familyPlaceholder": "e.g. social_media, word_of_mouth",
+      "defaultDiffusionRate": "Default diffusion rate"
+    },
+    "columns": {
+      "channelKey": "Channel key",
+      "label": "Label",
+      "family": "Family",
+      "defaultReach": "Default reach",
+      "defaultDiffusionRate": "Default diffusion rate"
+    },
+    "catalog": {
+      "title": "Platform catalog",
+      "subtitle": "Channels calibrated and maintained by the platform team, available to every client.",
+      "empty": "No official channel published yet.",
+      "numbersHidden": "This catalog's numeric values are hidden for your client."
+    },
+    "own": {
+      "title": "Your channels",
+      "subtitle": "Private channels created by your client (not visible to other clients)."
+    }
+  },
+  "diffusion": {
+    "title": "Channel diffusion",
+    "subtitle": "Create study events and simulate how exposure spreads across agents.",
+    "newEvent": "New event",
+    "events": "Events",
+    "empty": "No events created yet.",
+    "fields": {
+      "title": "Title",
+      "description": "Description",
+      "stimulus": "Stimulus",
+      "channel": "Channel",
+      "initialReach": "Initial reach",
+      "diffusionRate": "Diffusion rate",
+      "steps": "Steps",
+      "channelHint": "Picking a channel fills the reach/rate fields below with the channel's calibrated defaults — you can still adjust them.",
+      "continuesFrom": "Continue diffusion from a prior event?",
+      "continuesFromNone": "No — independent diffusion (default)",
+      "continuesFromHint": "Continuation mode: instead of seeding a fresh initial reach, this event starts from whoever was already exposed in the chosen event and keeps spreading from there — useful for modeling \"the same diffusion, checked again later\"."
+    },
+    "diffuse": "Diffuse",
+    "exposed": "Exposed",
+    "bySource": "By source",
+    "seed": "Seed",
+    "peer": "Peer",
+    "channel": "Channel",
+    "chartLabel": "Exposed agents per step",
+    "totalAgents": "Total agents",
+    "noStimuli": "Add a stimulus to the study before creating an event.",
+    "channelNone": "No channel",
+    "timeline": {
+      "title": "Diffusion timeline",
+      "subtitle": "Plan when each run happens relative to the study's start (D0) — a baseline survey, a diffusion event, a follow-up survey later.",
+      "dayZero": "D0",
+      "dayN": "D{n}",
+      "clickHint": "Click the track to create a run at that point",
+      "createHint": "Drag a marker to reschedule it; click an empty point to create a new run there."
+    },
+    "opinions": {
+      "title": "Generate opinions",
+      "subtitle": "Turns exposures into opinions (sentiment, adoption intent) via LLM — a separate, costed step.",
+      "estimate": "Estimate cost",
+      "generate": "Generate (sync)",
+      "submitBatch": "Submit batch",
+      "pollBatch": "Check status / import",
+      "syncAdvanced": "Run synchronous instead of batch (advanced, more expensive)",
+      "costLine": "{exposures} exposed agents · sync: {sync} · batch: {batch}",
+      "statusLabel": "Status",
+      "count": "{n} opinions",
+      "view": "View opinions",
+      "hide": "Hide opinions",
+      "empty": "No opinions generated yet.",
+      "agentFallback": "Agent #{id}",
+      "columns": {
+        "agent": "Agent",
+        "sentiment": "Sentiment",
+        "adoptionIntent": "Adoption intent",
+        "stance": "Stance",
+        "willShare": "Will share?",
+        "step": "Step"
+      }
+    }
+  },
+  "diffusionCompare": {
+    "title": "Compare opinions",
+    "subtitle": "Compare the opinions generated in two diffusion events — for example, the same audience at D0 and D+90.",
+    "backLabel": "Diffusion",
+    "eventA": "Event A (baseline)",
+    "eventB": "Event B (comparison)",
+    "selectEvent": "Select an event…",
+    "continuesFrom": "continues from: {label}",
+    "loadingOpinions": "Loading opinions…",
+    "pickBoth": "Select both events to compare.",
+    "sameEvent": "Event A and Event B are the same — pick two different events (e.g. an event and its continuation).",
+    "noOverlap": "No agent has an opinion in both events.",
+    "summary": {
+      "title": "Summary",
+      "avgSentimentA": "Avg. sentiment — A",
+      "avgSentimentB": "Avg. sentiment — B",
+      "avgAdoptionA": "Avg. adoption intent — A",
+      "avgAdoptionB": "Avg. adoption intent — B",
+      "totalA": "Opinions generated — A",
+      "totalB": "Opinions generated — B",
+      "commonAgents": "Agents in common",
+      "newInB": "New in B (not in A)",
+      "missingFromB": "Dropped from A to B",
+      "commonAgentsHint": "Only agents the diffusion actually exposed get an opinion — not always the whole population. In a well-formed continuation, \"Dropped from A to B\" should be 0: B should carry everyone from A forward and only add new reach.",
+      "chartLabel": "Average sentiment and adoption intent per event"
+    },
+    "table": {
+      "title": "By agent",
+      "agent": "Agent",
+      "sentimentA": "Sentiment (A)",
+      "sentimentB": "Sentiment (B)",
+      "sentimentDelta": "Δ Sentiment",
+      "adoptionA": "Adoption (A)",
+      "adoptionB": "Adoption (B)",
+      "adoptionDelta": "Δ Adoption",
+      "stanceB": "Stance (B)",
+      "onlyIn": "Only in {label}"
+    }
+  },
+  "agentGrounding": {
+    "subtitle": "The profile and stimulus used to generate this answer — recomputed on demand from the agent's evidence (none of this is stored per response).",
+    "agentFallback": "Agent #{id}",
+    "compiler": "Compiler",
+    "hash": "Hash",
+    "viewProfile": "View profile",
+    "answer": "Answer",
+    "profile": "Agent profile",
+    "sections": {
+      "knownFacts": "Known facts",
+      "observedHistory": "Observed history",
+      "syntheticPriors": "Synthetic priors",
+      "currentMentalState": "Current mental state",
+      "currentStimulus": "Question / stimulus presented"
+    }
+  },
+  "builder": {
+    "title": "Experiment builder",
+    "subtitle": "Set up a full experiment step by step, from research to a running study.",
+    "stepProgress": "Step {current} of {total}",
+    "step1": "1. Research and study",
+    "step2": "2. Population",
+    "step3": "3. Stimulus",
+    "step4": "4. Instrument (optional)",
+    "step5": "5. Run",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish",
+    "done": "Done",
+    "createResearch": "Create research",
+    "createStudy": "Create study",
+    "pickPopulation": "Attach population",
+    "addStimulus": "Add stimulus",
+    "stimulusImage": "Image (optional)",
+    "imageUnsupportedType": "Unsupported file type — use PNG, JPEG or WebP.",
+    "addInstrument": "Create instrument",
+    "createRun": "Create run",
+    "freeze": "Freeze run",
+    "execute": "Execute run",
+    "goToRun": "Open run",
+    "researchCreated": "Research created.",
+    "studyCreated": "Study created.",
+    "populationAttached": "Population attached.",
+    "stimulusAdded": "Stimulus added.",
+    "instrumentCreated": "Instrument created.",
+    "runCreated": "Run created.",
+    "runFrozen": "Run frozen.",
+    "skipInstrument": "Skip this step",
+    "addItem": "Add item",
+    "removeItem": "Remove",
+    "noPopulations": "No populations available for this country.",
+    "completeTitle": "Experiment ready",
+    "completeSubtitle": "Your run is frozen and ready to execute.",
+    "armSection": "Between-subjects variant (optional)",
+    "armSectionHint": "Give matching stimuli the same key to make them variants of one factor — each agent in the run is randomly assigned to exactly one, deterministically from the run's seed.",
+    "armSlotKey": "Variant key",
+    "armWeight": "Weight (blank = even split)",
+    "armSlotKeyPersists": "Variant key \"{key}\" stays filled in for the next stimulus you add — clear it once you're done with this group.",
+    "armSlotKeyClear": "Clear",
+    "stimulusPlaceholderHint": "Include {'{'}{'{'}STIMULUS{'}'}{'}'} where the agent's assigned variant should appear, and set this item's key to the same variant key used on the stimuli above.",
+    "conjointAttributes": "Conjoint attributes (optional)",
+    "addAttribute": "Add attribute",
+    "attribute": "Attribute",
+    "attributeValue": "Value",
+    "conjointAttributesHint": "For conjoint-style designs — pick a dimension (e.g. price) and a level (e.g. $9.90) this stimulus represents.",
+    "instrumentNotUsedForDiffusion": "Not needed for this exposure mode — channel_diffusion studies set up their stimulus, channel and event on the run's Diffusion tab instead.",
+    "completeTitleDiffusion": "Run created",
+    "completeSubtitleDiffusion": "Continue on the run's Diffusion tab to pick a channel, create the event and generate opinions.",
+    "goToDiffusion": "Go to Diffusion"
+  },
+  "status": {
+    "draft": "Draft",
+    "active": "Active",
+    "completed": "Completed",
+    "archived": "Archived",
+    "generating": "Generating",
+    "ready": "Ready",
+    "error": "Error",
+    "frozen": "Frozen",
+    "running": "Running",
+    "done": "Done"
+  },
+  "aiAnalysis": {
+    "title": "AI analysis",
+    "subtitle": {
+      "run": "Summary of this run — the AI only narrates the analysis modules already computed below.",
+      "study": "Summary of this study, rolling up its already-synthesized runs.",
+      "research": "Final research synthesis — rolls up every study and answers the research questions."
+    },
+    "estimate": "Estimate cost",
+    "run": "Generate analysis",
+    "rerun": "Regenerate",
+    "running": "Generating analysis...",
+    "empty": "No analysis generated yet.",
+    "model": "Model",
+    "estTokens": "Est. tokens",
+    "estCost": "Est. cost",
+    "keyFindings": "Key findings",
+    "caveats": "Caveats",
+    "questionAnswers": "Research question answers",
+    "computedWith": "Generated with {model}",
+    "fidelity": {
+      "calibration": "Calibration (absolute level)",
+      "comparativeEffects": "Comparative effect",
+      "rankingDecision": "Ranking / decision",
+      "status": {
+        "supported": "Supported",
+        "not_supported": "Not supported",
+        "mixed": "Mixed",
+        "insufficient_evidence": "Insufficient evidence"
+      }
+    },
+    "confidence": {
+      "high": "High confidence",
+      "medium": "Medium confidence",
+      "low": "Low confidence"
+    },
+    "gate": {
+      "noRuns": "This study has no runs yet (or every run is excluded) — nothing to synthesize.",
+      "runsUnfinished": "Not every run has finished yet: {list}. Wait for them to finish, or exclude the ones you don't want counted before generating the synthesis.",
+      "noStudies": "This research has no studies yet — nothing to synthesize.",
+      "studiesUnsynthesized": "Not every study has its own synthesis yet: {list}. Generate each study's AI analysis first."
+    }
+  },
+  "researchQuestions": {
+    "title": "Research questions",
+    "subtitle": "What you want the final analysis to answer, rolling up every study in this research.",
+    "add": "+ Add question",
+    "placeholder": "e.g. Among the options tested, which dominates the others, and for which segments?",
+    "empty": "No research questions added yet."
+  },
+  "registry": {
+    "client_sector": {
+      "private": "Private",
+      "public": "Public",
+      "ngo": "NGO",
+      "academic": "Academic"
+    },
+    "membership_role": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "researcher": "Researcher",
+      "viewer": "Viewer"
+    },
+    "exposure_mode": {
+      "direct_assignment": "Direct assignment",
+      "direct_assignment_desc": "Every agent sees the stimulus and answers directly — like a traditional survey. Use this to measure the whole population's reaction at once, with no simulation of how the information spreads.",
+      "channel_diffusion": "Channel diffusion",
+      "channel_diffusion_desc": "The stimulus spreads gradually through the population, entering via a channel (social media, TV, internal rumor, etc.) and passing person to person. Only agents who became \"exposed\" form an opinion. Use this to compare diffusion channels or measure adoption over time — the trade-off is the extra setup of a channel, reach and diffusion rate."
+    },
+    "synthesizer": {
+      "independent_quota_v1": "Independent quota (v1)",
+      "independent_quota_v1_desc": "Samples each attribute independently from marginal quotas.",
+      "ipf_v1": "IPF (v1)",
+      "ipf_v1_desc": "Iterative proportional fitting to match joint distributions."
+    },
+    "axis_pack_category": {
+      "demographic": "Demographic",
+      "socioeconomic": "Socioeconomic",
+      "behavioral": "Behavioral",
+      "geographic": "Geographic",
+      "custom": "Custom"
+    },
+    "grounding_compiler": {
+      "generic_llm_v1": "Generic LLM (v1)",
+      "generic_llm_v1_desc": "Uses the LLM without additional grounding.",
+      "persona_demographic_v1": "Persona demographic (v1)",
+      "persona_demographic_v1_desc": "Grounds each agent in its demographic attributes.",
+      "persona_profile_v1": "Persona profile (v1)",
+      "persona_profile_v1_desc": "Grounds each agent in all of its available evidence, uniformly and without provenance.",
+      "population_grounded_v1": "Population grounded (v1)",
+      "population_grounded_v1_desc": "Grounds responses in the population distribution.",
+      "evidence_grounded_v1": "Evidence grounded (v1)",
+      "evidence_grounded_v1_desc": "Grounds responses in evidence and benchmarks."
+    },
+    "item_type": {
+      "scale_0_10": "Scale 0–10",
+      "single_choice": "Single choice",
+      "multiple_choice": "Multiple choice",
+      "open": "Open answer",
+      "conjoint_profile_choice": "Conjoint profile choice",
+      "conjoint_profile_choice_desc": "Presents stimulus profiles for the agent to choose from."
+    },
+    "analysis_module": {
+      "attribute_distribution": "Attribute distribution",
+      "attribute_distribution_desc": "Distribution of values per attribute across the population.",
+      "representativeness_chi2": "Representativeness (χ²)",
+      "representativeness_chi2_desc": "Chi-square goodness-of-fit of the observed population against reference targets.",
+      "adoption_summary": "Adoption summary",
+      "adoption_summary_desc": "Summarizes adoption outcomes from responses.",
+      "segment_breakdown": "Segment breakdown",
+      "segment_breakdown_desc": "Breaks results down by population segments.",
+      "response_fidelity_correlation": "Response fidelity (correlation)",
+      "response_fidelity_correlation_desc": "Pearson correlation between the human and synthetic value per respondent.",
+      "decision_fidelity_winner": "Decision fidelity (winner)",
+      "decision_fidelity_winner_desc": "Checks whether the synthetic population picks the same winner as humans.",
+      "bootstrap_robustness": "Robustness (bootstrap)",
+      "bootstrap_robustness_desc": "Bootstrap confidence interval of the human-vs-synthetic mean absolute error.",
+      "structural_drivers_eta2": "Structural drivers (eta²)",
+      "structural_drivers_eta2_desc": "How much of the answer variance each attribute explains (weighted eta²).",
+      "amce_conjoint": "AMCE (conjoint)",
+      "amce_conjoint_desc": "Average marginal effect of each attribute value on the outcome.",
+      "cross_profile": "Cross profile",
+      "cross_profile_desc": "Crosses the two highest-eta² attributes and shows the rate per combined cell.",
+      "channel_segment_comparison": "Channel comparison by segment",
+      "channel_segment_comparison_desc": "For each segment, which channel produced the best market response (adoption).",
+      "treatment_effect_categorical": "Treatment effect vs. control (categorical)",
+      "treatment_effect_categorical_desc": "Compares this arm's effect over control (gap between two categories) in human vs. synthetic data. Requires pointing at the control arm's run.",
+      "subgroup_heterogeneity_fidelity": "Subgroup heterogeneity vs. human",
+      "subgroup_heterogeneity_fidelity_desc": "Compares the human vs. synthetic outcome distribution within each value of a respondent attribute (e.g. vaccination status).",
+      "conjoint_stimulus_amce": "Conjoint AMCE (stimulus attribute)",
+      "conjoint_stimulus_amce_desc": "Average marginal effect of each STIMULUS/PROFILE attribute level (e.g. efficacy, country of origin) on the chance of being chosen — distinct from AMCE by respondent attribute.",
+      "conjoint_stimulus_amce_by_subgroup": "Conjoint AMCE by subgroup",
+      "conjoint_stimulus_amce_by_subgroup_desc": "The same stimulus AMCE, computed separately for each value of a respondent attribute (e.g. party) — tests interactions like partisan reversal on an endorsement attribute."
+    },
+    "chart_type": {
+      "bar": "Bar",
+      "grouped_bar": "Grouped bar",
+      "pie": "Pie",
+      "table": "Table"
+    },
+    "llm_provider": {
+      "anthropic": "Anthropic",
+      "gemini": "Gemini",
+      "openai": "OpenAI"
+    }
+  }
+}

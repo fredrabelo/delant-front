@@ -1,0 +1,1038 @@
+{
+  "app": {
+    "title": "{name}",
+    "welcome": "Bem-vindo(a) ao {name}"
+  },
+  "nav": {
+    "primary": "Navegação principal",
+    "workspace": "Espaço de trabalho",
+    "settings": "Configurações",
+    "home": "Início",
+    "dashboard": "Painel",
+    "researches": "Pesquisas",
+    "populations": "Populações",
+    "builder": "Construtor de experimentos",
+    "newExperiment": "Novo experimento",
+    "channels": "Canais",
+    "team": "Equipe",
+    "llm": "LLM",
+    "usage": "Uso e custos",
+    "dataSources": "Fontes de dados",
+    "admin": "Admin",
+    "adminClients": "Organizações",
+    "adminDataSources": "Fontes de dados",
+    "adminChannels": "Canais de difusão"
+  },
+  "common": {
+    "language": "Idioma",
+    "hello": "Olá",
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro. Tente novamente.",
+    "select": "Selecione...",
+    "create": "Criar",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "back": "Voltar",
+    "actions": "Ações",
+    "yes": "Sim",
+    "no": "Não",
+    "saving": "Salvando…",
+    "saved": "Salvo"
+  },
+  "llmConfirm": {
+    "title": "Confirmar chamada de LLM",
+    "subtitle": "Nada é enviado ao provedor até você confirmar aqui.",
+    "mode": "Forma de execução",
+    "modeValue": {
+      "sync": "Síncrona (chamada direta, mais cara)",
+      "batch": "Lote (Batches API do provedor, ~50% mais barato)",
+      "analysis": "Síntese (1 chamada)"
+    },
+    "model": "Modelo",
+    "calls": "Chamadas de LLM",
+    "estCost": "Custo estimado",
+    "confirm": "Confirmar e executar"
+  },
+  "auth": {
+    "logout": "Sair",
+    "fields": {
+      "name": "Nome",
+      "email": "E-mail",
+      "password": "Senha"
+    },
+    "login": {
+      "title": "Entrar",
+      "subtitle": "Acesse sua conta para continuar.",
+      "submit": "Entrar",
+      "noAccount": "Não tem uma conta?"
+    },
+    "register": {
+      "title": "Criar conta",
+      "subtitle": "Cadastre-se para começar.",
+      "submit": "Cadastrar",
+      "hasAccount": "Já tem uma conta?"
+    }
+  },
+  "dashboard": {
+    "title": "{name}",
+    "welcome": "Bem-vindo(a), {name}",
+    "links": {
+      "researches": "Gerencie suas pesquisas e estudos.",
+      "populations": "Sintetize e gerencie populações.",
+      "builder": "Monte um experimento completo, passo a passo.",
+      "team": "Gerencie membros e permissões."
+    },
+    "slogan": "Não é uma resposta certa. É a direção que a população aponta.",
+    "llmKeyBanner": {
+      "title": "Cadastre sua chave de LLM pra rodar experimentos",
+      "body": "Execuções e análises deste cliente usam sua própria chave Anthropic, OpenAI ou Gemini — nada roda até pelo menos uma estar configurada.",
+      "action": "Configurar chave"
+    },
+    "howItWorks": {
+      "trigger": "Como funciona",
+      "title": "Como funciona a {name}",
+      "intro": "A {name} roda suas perguntas contra uma população sintética — milhares de respondentes simulados, calibrados com dados demográficos reais — para você ver como as pessoas provavelmente reagiriam antes de gastar um único real com um painel de verdade.",
+      "sections": {
+        "population": {
+          "title": "Uma população calibrada, não um chute",
+          "body": "Cada respondente simulado (\"agente\") carrega atributos demográficos e comportamentais reais — idade, renda, região, atitudes — construídos para bater com a composição da sua população-alvo. Você pode auditar essa composição a qualquer momento, comparando os percentuais simulados com os percentuais reais dos seus eixos de origem."
+        },
+        "direction": {
+          "title": "A resposta nunca é \"A\", \"B\" ou \"C\"",
+          "body": "Quando fazemos uma pergunta ao painel sintético, não pedimos — nem confiamos em — uma única resposta \"certa\". Assim como numa pesquisa real, agregamos centenas ou milhares de respostas independentes e reportamos a distribuição estatística: qual opção teve mais adesão, para que direção um efeito se moveu entre grupos, e o quão confiável é essa diferença. A plataforma nunca declara uma resposta como \"a verdade\" — ela mostra a direção e a força do sinal, com as ressalvas que ele exige."
+        },
+        "flow": {
+          "title": "Do rascunho ao resultado",
+          "body": "Defina sua população-alvo, seu estímulo e seu instrumento de resposta, rode o experimento e receba estatísticas reais além de uma síntese narrativa gerada por IA que nunca inventa um número — ela só explica o que já foi calculado."
+        }
+      }
+    }
+  },
+  "clients": {
+    "active": "Cliente ativo",
+    "switcher": "Trocar de cliente",
+    "none": "Nenhum cliente",
+    "fields": {
+      "name": "Nome",
+      "sector": "Setor",
+      "legalName": "Razão social",
+      "country": "País"
+    },
+    "create": {
+      "title": "Criar um cliente",
+      "subtitle": "Você ainda não pertence a nenhum cliente. Crie o primeiro.",
+      "submit": "Criar cliente"
+    }
+  },
+  "researches": {
+    "title": "Pesquisas",
+    "subtitle": "Suas perguntas de pesquisa e os estudos de cada uma.",
+    "new": "Nova pesquisa",
+    "empty": "Nenhuma pesquisa encontrada.",
+    "columns": {
+      "name": "Nome",
+      "status": "Situação",
+      "created": "Criado em"
+    },
+    "fields": {
+      "department": "Departamento",
+      "country": "País",
+      "name": "Nome",
+      "objective": "Objetivo"
+    },
+    "llmOverride": {
+      "title": "Modelo de IA para análise",
+      "subtitle": "Sobrepõe o padrão da plataforma para a análise por IA desta pesquisa (níveis de execução, estudo e pesquisa). Deixe em branco para usar o padrão da plataforma.",
+      "provider": "Provedor",
+      "model": "Modelo",
+      "usePlatformDefault": "Padrão da plataforma",
+      "clear": "Remover override",
+      "currentlyUsing": "Usando atualmente: {provider} / {model}",
+      "currentlyUsingPlatformDefault": "Usando atualmente o padrão da plataforma (veja Configurações → LLM)."
+    }
+  },
+  "studies": {
+    "title": "Estudos",
+    "heading": "Estudos",
+    "new": "Novo estudo",
+    "empty": "Nenhum estudo encontrado.",
+    "columns": {
+      "name": "Nome",
+      "status": "Situação",
+      "exposureMode": "Modo de exposição",
+      "created": "Criado em",
+      "progress": "Progresso"
+    },
+    "fields": {
+      "name": "Nome",
+      "description": "Descrição",
+      "exposureMode": "Modo de exposição"
+    },
+    "attach": {
+      "title": "Populações",
+      "subtitle": "Populações vinculadas a este estudo. A mesma população pode servir a vários estudos.",
+      "submit": "Anexar",
+      "attached": "Anexadas",
+      "none": "Nenhuma população anexada ainda.",
+      "addAnother": "Anexar uma população",
+      "detach": "Desanexar",
+      "agentsCount": "{n} agentes"
+    },
+    "progress": {
+      "runs": "runs",
+      "events": "opiniões"
+    }
+  },
+  "dataSources": {
+    "catalog": {
+      "title": "Fontes de dados",
+      "subtitle": "Explore as fontes de dados populacionais que você pode usar para montar populações.",
+      "country": "País",
+      "none": "Nenhuma fonte de dados para este país.",
+      "public": "pública",
+      "private": "privada",
+      "geographic": "estado / cidade",
+      "national": "nacional",
+      "confidence": "Confiança",
+      "quality": "Qualidade",
+      "onDemand": "cidades sob demanda",
+      "viewAxes": "Ver eixos",
+      "hideAxes": "Ocultar eixos",
+      "axes": "Eixos",
+      "noAxes": "Nenhum eixo nesta fonte.",
+      "createPopulation": "Criar população"
+    }
+  },
+  "admin": {
+    "dataSources": {
+      "title": "Fontes de dados",
+      "subtitle": "Crie e gerencie as fontes de dados populacionais disponíveis aos clientes.",
+      "existing": "Fontes existentes",
+      "none": "Nenhuma fonte de dados ainda.",
+      "public": "pública",
+      "private": "privada",
+      "publish": "Publicar",
+      "create": "Nova fonte de dados",
+      "createButton": "Criar fonte",
+      "key": "Chave",
+      "organization": "Organização",
+      "namePt": "Nome (PT)",
+      "nameEn": "Nome (EN)",
+      "descriptionPt": "Descrição (PT)",
+      "descriptionEn": "Descrição (EN)",
+      "sourceType": "Tipo de fonte",
+      "country": "País",
+      "universal": "Universal (todos os países)",
+      "geographyScope": "Escopo geográfico",
+      "onDemandProvider": "Provider on-demand",
+      "onDemandHint": "Preencha (ex.: ibge_sidra) para permitir que pesquisadores busquem cidades. Vazio = curada.",
+      "referencePeriod": "Período de referência",
+      "license": "Licença",
+      "homepage": "URL institucional",
+      "confidence": "Confiança (0–1)",
+      "quality": "Qualidade (0–1)",
+      "isOfficial": "Pública (visível a todos os clientes)"
+    },
+    "channels": {
+      "title": "Canais de difusão",
+      "subtitle": "Crie e gerencie o catálogo de canais de difusão calibrados, disponíveis a todos os clientes.",
+      "existing": "Canais existentes",
+      "none": "Nenhum canal ainda.",
+      "official": "oficial",
+      "private": "privado",
+      "publish": "Publicar",
+      "create": "Novo canal",
+      "createButton": "Criar canal",
+      "key": "Chave",
+      "family": "Família",
+      "labelPt": "Rótulo (PT)",
+      "labelEn": "Rótulo (EN)",
+      "defaultReach": "Alcance padrão (0–1)",
+      "defaultDiffusionRate": "Taxa de difusão padrão (0–1)",
+      "isOfficial": "Oficial (visível a todos os clientes)"
+    },
+    "clients": {
+      "title": "Organizações",
+      "subtitle": "Todas as orgs (clientes) da plataforma — crie novas, gerencie membros e veja quem está usando.",
+      "detailSubtitle": "Membros, convites e log de acesso desta org.",
+      "existing": "Organizações",
+      "none": "Nenhuma organização ainda.",
+      "viewMembers": "Ver membros",
+      "deactivate": "Desativar",
+      "reactivate": "Reativar",
+      "create": "Nova organização",
+      "createButton": "Criar organização",
+      "ownerEmail": "E-mail do dono (opcional)",
+      "ownerEmailHint": "Precisa já ter uma conta no delant. Deixe em branco pra você mesmo virar o dono.",
+      "members": "Membros",
+      "newAccount": "Essa pessoa ainda não tem conta",
+      "newAccountPassword": "Senha temporária",
+      "newAccountPasswordHint": "Compartilhe com a pessoa por fora — ainda não tem envio de e-mail de convite. Ela pode trocar depois.",
+      "accessLog": "Log de acesso",
+      "accessLogEmpty": "Nenhum acesso registrado ainda."
+    }
+  },
+  "populations": {
+    "title": "Populações",
+    "subtitle": "Populações sintéticas prontas para vincular a estudos.",
+    "new": "Nova população",
+    "empty": "Nenhuma população encontrada.",
+    "generating": "Gerando população...",
+    "errorTitle": "Falha na geração",
+    "columns": {
+      "name": "Nome",
+      "status": "Situação",
+      "agentCount": "Agentes"
+    },
+    "fields": {
+      "name": "Nome",
+      "size": "Tamanho",
+      "country": "País",
+      "geography": "Geografia",
+      "synthesizer": "Sintetizador",
+      "seed": "Semente",
+      "seedHint": "Fixa o sorteio aleatório para que os mesmos dados reproduzam os mesmos agentes. Deixe como está, a menos que queira um conjunto diferente."
+    },
+    "builder": {
+      "title": "Construtor de população",
+      "subtitle": "Defina país, eixos, atributos e tamanho para sintetizar uma população.",
+      "step1": "1. País e fontes de dados",
+      "step2": "2. Eixos",
+      "step3": "3. Tamanho e configurações",
+      "dataSources": "Fontes de dados",
+      "dataSourcesHint": "Escolha uma ou mais fontes (ex.: IBGE, ou a sua própria). Os eixos delas aparecem abaixo.",
+      "noDataSources": "Nenhuma fonte de dados para este país.",
+      "sourcePublic": "pública",
+      "sourcePrivate": "privada",
+      "selectSourceFirst": "Selecione ao menos uma fonte de dados.",
+      "noAttributes": "Nenhum eixo disponível.",
+      "state": "Estado",
+      "city": "Cidade",
+      "wholeState": "Estado inteiro",
+      "noCities": "Nenhuma cidade importada ainda para este estado.",
+      "findCity": "+ Buscar uma cidade (IBGE)",
+      "findCityHint": "Busque um município; puxamos os dados do Censo sob demanda e guardamos em cache para todos.",
+      "findCityPlaceholder": "Digite o nome da cidade…",
+      "cityFetchStarting": "Iniciando busca…",
+      "cityFetchProgress": "Buscando no IBGE… {p}%",
+      "cityFetchFailed": "A busca no IBGE falhou. Tente de novo.",
+      "wholeCountry": "País inteiro",
+      "geographyHint": "Usada para os % alvo de cada eixo e para o tamanho real da população.",
+      "generate": "Gerar população",
+      "addCustomAxis": "+ Criar eixo personalizado",
+      "axisKey": "Chave do eixo",
+      "axisKeyHint": "ex.: renda_familiar",
+      "axisLabelPt": "Rótulo (PT-BR)",
+      "axisLabelEn": "Rótulo (EN-US)",
+      "axisValues": "Valores possíveis",
+      "axisValueKey": "Chave do valor",
+      "addAxisValue": "+ Adicionar valor",
+      "createAxis": "Criar eixo",
+      "compositionPreview": "Composição da população (% alvo por eixo)",
+      "targetShare": "% alvo",
+      "noTargetShare": "Sem % de referência para este eixo (eixo personalizado ou sem dado de origem)."
+    },
+    "composition": {
+      "title": "Composição da população",
+      "subtitle": "% observado por eixo, comparado ao alvo de origem (auditoria de aderência).",
+      "noAudit": "Sem alvo pra auditar",
+      "empty": "Nenhum eixo com atributo nesta população ainda."
+    },
+    "agents": {
+      "title": "Pessoas e perfis",
+      "subtitle": "{total} agentes gerados. Confira se os perfis batem com os eixos de origem.",
+      "id": "Agente",
+      "empty": "Nenhum agente encontrado.",
+      "pageInfo": "{from}–{to} de {total}",
+      "next": "Próxima"
+    }
+  },
+  "stimuli": {
+    "title": "Estímulos",
+    "subtitle": "Peças de conteúdo apresentadas aos agentes neste estudo.",
+    "new": "Novo estímulo",
+    "empty": "Nenhum estímulo encontrado.",
+    "invalidJson": "O payload deve ser um JSON válido.",
+    "payloadHint": "JSON opcional, ex.: {'{'} \"cor\": \"azul\" {'}'}",
+    "fields": {
+      "title": "Título",
+      "body": "Conteúdo",
+      "payload": "Payload (JSON)"
+    }
+  },
+  "instruments": {
+    "title": "Instrumentos",
+    "subtitle": "Questionários e itens de medição aplicados na execução.",
+    "new": "Novo instrumento",
+    "empty": "Nenhum instrumento encontrado.",
+    "showItems": "Mostrar itens",
+    "hideItems": "Ocultar itens",
+    "noItems": "Nenhum item neste instrumento.",
+    "fields": {
+      "name": "Nome",
+      "description": "Descrição",
+      "itemType": "Tipo do item",
+      "itemKey": "Chave do item",
+      "promptText": "Enunciado",
+      "required": "Obrigatório",
+      "min": "Mínimo",
+      "max": "Máximo",
+      "options": "Opções",
+      "optionKey": "Chave",
+      "optionLabel": "Rótulo",
+      "stimuli": "Estímulos"
+    },
+    "builder": {
+      "title": "Construtor de instrumento",
+      "items": "Itens",
+      "item": "Item",
+      "addItem": "Adicionar item",
+      "addOption": "Adicionar opção",
+      "noOptions": "Nenhuma opção adicionada.",
+      "noStimuli": "Cadastre estímulos primeiro para usar escolha conjunta."
+    }
+  },
+  "runs": {
+    "title": "Execuções",
+    "subtitle": "Configure, congele e acompanhe as execuções do estudo.",
+    "new": "Nova execução",
+    "empty": "Nenhuma execução encontrada.",
+    "open": "Abrir",
+    "tabs": {
+      "overview": "Visão geral",
+      "statistics": "Estatística",
+      "visualizations": "Visualização",
+      "diffusion": "Difusão",
+      "diffusionCompare": "Comparar opiniões"
+    },
+    "freeze": "Congelar",
+    "freezeHint": "Congela o snapshot desta execução (populações, estímulos e configurações).",
+    "fields": {
+      "name": "Nome",
+      "groundingCompiler": "Compilador de fundamentação",
+      "llmProvider": "Provedor de LLM",
+      "llmModel": "Modelo de LLM",
+      "instrument": "Instrumento",
+      "seed": "Semente",
+      "timelineOffsetDays": "Dias desde D0",
+      "timelineOffsetDaysHint": "Posição desta execução na linha do tempo de difusão do estudo (0 = D0)."
+    },
+    "manifest": {
+      "title": "Snapshot congelado",
+      "populations": "Populações",
+      "stimuli": "Estímulos",
+      "frozenAt": "Congelado em"
+    },
+    "execution": {
+      "title": "Execução",
+      "statusLabel": "Situação",
+      "execute": "Executar execução",
+      "reRun": "Reexecutar",
+      "executing": "Executando...",
+      "progress": "Progresso",
+      "errorInfo": "A execução foi finalizada com uma mensagem do servidor:",
+      "modeBatch": "Lote (padrão, ~50% mais barato)",
+      "modeSync": "Síncrono (avançado, mais caro)"
+    },
+    "cost": {
+      "title": "Estimativa de custo",
+      "subtitle": "Custo estimado antes de rodar, com base no manifesto congelado.",
+      "estimate": "Estimar custo",
+      "calls": "Chamadas LLM",
+      "callsBreakdown": "{agents} agentes x {items} itens",
+      "estTokens": "Tokens est.",
+      "estSync": "Custo est. (síncrono)",
+      "estBatch": "Custo est. (lote)"
+    },
+    "batch": {
+      "title": "Execução em lote",
+      "subtitle": "Caminho mais barato para runs grandes via Batches API do provedor (~50% off).",
+      "submit": "Enviar lote",
+      "poll": "Verificar status",
+      "statusLabel": "Lote"
+    },
+    "responses": {
+      "title": "Respostas",
+      "view": "Ver respostas",
+      "agent": "Agente",
+      "question": "Pergunta",
+      "value": "Valor",
+      "explanation": "Explicação",
+      "cappedNote": "Limitado a 200 linhas.",
+      "count": "{n} respostas",
+      "empty": "Nenhuma resposta encontrada."
+    },
+    "runAll": {
+      "trigger": "Executar tudo",
+      "title": "Executar tudo",
+      "subtitle": "Roda todas as execuções congeladas deste estudo de uma vez — mostra o custo total antes de qualquer chamada de LLM.",
+      "item": "Item",
+      "total": "Total",
+      "nothingToRun": "Nada pronto pra executar agora (nenhuma execução congelada, ou os canais ainda não foram difundidos).",
+      "skipped": "Ignorados",
+      "skippedNoExposure": "\"{title}\" ainda não tem difusão rodada",
+      "started": "Disparado! Acompanhe o progresso na execução ou no evento de difusão.",
+      "confirm": "Confirmar e executar ({n})",
+      "startedBatch": "Enviado em lote! Acompanhe o status em cada execução ou evento de difusão (pode levar até 24h).",
+      "useSync": "Usar síncrono em vez de lote (avançado, mais caro, mais rápido)"
+    },
+    "checkAll": {
+      "trigger": "Checar tudo",
+      "title": "Checar tudo",
+      "subtitle": "Verifica o status de todo lote em andamento (runs e eventos de difusão) e importa o resultado assim que terminar.",
+      "nothingPending": "Nenhum lote em andamento agora.",
+      "confirm": "Atualizar status ({n} pendente(s))",
+      "itemFailed": "Falhou nesta tentativa"
+    },
+    "eventProgress": "{done}/{total} opiniões prontas",
+    "excluded": "Excluído da síntese",
+    "exclude": "Excluir",
+    "include": "Incluir"
+  },
+  "statistics": {
+    "title": "Estatísticas",
+    "subtitle": "Execute módulos de análise sobre esta execução.",
+    "run": "Executar",
+    "requiresResponses": "Requer uma execução com respostas de LLM.",
+    "exportCsv": "Exportar CSV",
+    "exportJson": "Exportar JSON",
+    "pValue": "valor-p",
+    "notDistinguishable": "Não distinguível estatisticamente",
+    "distinguishable": "Estatisticamente distinguível",
+    "computed": "Análise calculada.",
+    "columns": {
+      "valueKey": "Valor",
+      "observedShare": "Observado",
+      "targetShare": "Alvo",
+      "diff": "Diferença",
+      "withinMargin": "Dentro da margem",
+      "count": "Contagem",
+      "share": "Proporção",
+      "n": "N"
+    },
+    "status": {
+      "no_benchmark": "Nenhum benchmark humano importado para este estudo ainda.",
+      "no_responses": "Este run ainda não tem respostas para analisar.",
+      "no_attributes": "Este run tem respostas, mas os agentes não têm atributos para agrupar.",
+      "not_applicable": "Não aplicável a este run.",
+      "insufficient_pairs": "Pares numéricos insuficientes para calcular.",
+      "insufficient_attributes": "Precisa de pelo menos dois atributos para cruzar.",
+      "no_common_questions": "Nenhuma pergunta em comum entre dados humanos e sintéticos.",
+      "no_population": "Este run não tem população.",
+      "no_opinions": "Gere opiniões nos eventos deste run antes de comparar canais.",
+      "single_channel": "É preciso ao menos dois canais para comparar; este run difundiu por um só."
+    },
+    "decisionFidelity": {
+      "headline": "concorda em {agree} de {total} perguntas",
+      "human": "Vencedor humano",
+      "synthetic": "Vencedor sintético",
+      "agree": "Concorda"
+    },
+    "responseFidelity": {
+      "headline": "correlação de Pearson média (humano x sintético)",
+      "r": "Correlação r"
+    },
+    "bootstrap": {
+      "headline": "erro absoluto médio, IC 95% [{low}, {high}]"
+    },
+    "drivers": {
+      "attribute": "Atributo",
+      "etaSquared": "eta quadrado"
+    },
+    "amce": {
+      "positive": "Resultado positivo: {outcome}",
+      "effect": "AMCE"
+    },
+    "crossProfile": {
+      "headline": "{a} x {b} - proporção de “{outcome}” por célula",
+      "modalShare": "Proporção modal"
+    },
+    "segmentBreakdown": {
+      "headline": "Segmentando por: {attribute}"
+    },
+    "channelSegment": {
+      "headline": "Segmentando por: {attribute}",
+      "winner": "Vencedor: {channel}",
+      "meanAdoption": "Intenção média de adoção"
+    },
+    "segmentPicker": {
+      "label": "Segmentar por"
+    }
+  },
+  "visualizations": {
+    "title": "Visualizações",
+    "subtitle": "Crie gráficos a partir das análises calculadas.",
+    "create": "Nova visualização",
+    "empty": "Nenhuma visualização criada.",
+    "needComputed": "Calcule uma análise antes de criar uma visualização.",
+    "attributeHint": "Chave do atributo (opcional)",
+    "fields": {
+      "title": "Título",
+      "analysisModule": "Módulo de análise",
+      "chartType": "Tipo de gráfico",
+      "attributeKey": "Atributo"
+    },
+    "chart": {
+      "noData": "Sem dados para exibir."
+    }
+  },
+  "llm": {
+    "title": "LLM",
+    "subtitle": "Status e provedores de modelos de linguagem.",
+    "statusTitle": "Status do LLM",
+    "statusSubtitle": "Indica se as chamadas a LLM estão habilitadas neste servidor.",
+    "enabled": "Habilitado",
+    "disabled": "Desabilitado",
+    "disabledNote": "O LLM vem desabilitado por padrão. Nenhuma chamada externa é feita até ser habilitado no servidor via LLM_ENABLED no .env.",
+    "providers": "Provedores",
+    "available": "Disponível",
+    "unavailable": "Indisponível",
+    "modelsTitle": "Provedores e modelos",
+    "noModels": "Nenhum modelo listado.",
+    "columns": {
+      "model": "Modelo",
+      "pricing": "Preço",
+      "purpose": "Finalidade",
+      "provider": "Provedor"
+    },
+    "defaultsTitle": "Padrões por finalidade",
+    "defaultsSubtitle": "O provedor/modelo usado quando uma pesquisa, estudo ou execução não define seu próprio override. Alterar um padrão aqui vale a partir da próxima execução — nunca reescreve resultados já gerados.",
+    "editRequiresAdmin": "Somente donos e administradores do cliente podem alterar esses padrões.",
+    "unconfirmedPricingSuffix": "(estimado — ainda não confirmado com o provedor)",
+    "purposes": {
+      "ai_analysis_run": {
+        "label": "Análise por IA — nível de execução",
+        "hint": "Síntese narrativa gerada para uma única execução de estudo."
+      },
+      "ai_analysis_study": {
+        "label": "Análise por IA — nível de estudo",
+        "hint": "Síntese narrativa gerada a partir das execuções de um estudo."
+      },
+      "ai_analysis_research": {
+        "label": "Análise por IA — nível de pesquisa",
+        "hint": "Síntese narrativa final de toda a pesquisa."
+      },
+      "study_run": {
+        "label": "Execução do estudo",
+        "hint": "Modelo usado para responder aos itens do instrumento quando uma execução é congelada sem provedor/modelo explícito."
+      }
+    },
+    "credentials": {
+      "title": "Chaves de API",
+      "subtitle": "Sua própria chave para cada provedor — execuções e análises deste cliente cobram nela, nunca na da plataforma.",
+      "editRequiresAdmin": "Somente donos e administradores do cliente podem gerenciar chaves de API.",
+      "configured": "Configurada",
+      "notConfigured": "Não configurada",
+      "lastFour": "Termina em {lastFour}",
+      "updatedAt": "Atualizada em {date}",
+      "placeholder": "Cole a chave de API",
+      "save": "Salvar",
+      "saved": "Salva",
+      "remove": "Remover",
+      "removeConfirm": "Remover essa chave? As execuções deste cliente vão parar de funcionar até uma nova ser configurada.",
+      "notSupported": "Ainda não suporta chave própria — esse provedor continua usando a credencial da plataforma."
+    }
+  },
+  "usage": {
+    "title": "Uso e custo",
+    "subtitle": "Consumo de tokens e custo estimado desta execução.",
+    "totalCost": "Custo total",
+    "calls": "Chamadas",
+    "inputTokens": "Tokens de entrada",
+    "outputTokens": "Tokens de saída",
+    "byModel": "Por modelo",
+    "byPurpose": "Por finalidade",
+    "provider": "Provedor",
+    "model": "Modelo",
+    "purpose": "Finalidade",
+    "from": "De",
+    "to": "Até",
+    "allProviders": "Todos os provedores",
+    "apply": "Aplicar",
+    "clear": "Limpar",
+    "empty": "Nenhum uso registrado para os filtros selecionados.",
+    "clientTitle": "Uso e custos do cliente",
+    "clientSubtitle": "Consumo agregado de tokens e custo de tudo que este cliente executou."
+  },
+  "team": {
+    "title": "Equipe",
+    "members": "Membros",
+    "empty": "Nenhum membro encontrado.",
+    "columns": {
+      "user": "Usuário",
+      "role": "Função",
+      "department": "Departamento"
+    },
+    "fields": {
+      "email": "Email",
+      "role": "Função",
+      "department": "Departamento"
+    },
+    "invite": {
+      "title": "Adicionar membro",
+      "submit": "Adicionar",
+      "emailHint": "A pessoa precisa já ter uma conta no delant (cadastrar antes) — adicionar aqui ainda não envia e-mail de convite."
+    }
+  },
+  "channels": {
+    "title": "Canais",
+    "subtitle": "Canais e vetores de difusão — marketing (TikTok, TV) ou não (boato interno, boca a boca) — usados em estudos de difusão por canal.",
+    "new": "Novo canal",
+    "empty": "Nenhum canal encontrado.",
+    "fields": {
+      "channelKey": "Chave do canal",
+      "family": "Família",
+      "defaultReach": "Alcance padrão",
+      "labelPt": "Rótulo (pt-BR)",
+      "labelEn": "Rótulo (en-US)",
+      "familyPlaceholder": "ex.: social_media, word_of_mouth",
+      "defaultDiffusionRate": "Taxa de difusão padrão"
+    },
+    "columns": {
+      "channelKey": "Chave do canal",
+      "label": "Rótulo",
+      "family": "Família",
+      "defaultReach": "Alcance padrão",
+      "defaultDiffusionRate": "Taxa de difusão padrão"
+    },
+    "catalog": {
+      "title": "Catálogo da plataforma",
+      "subtitle": "Canais calibrados e mantidos pela equipe da plataforma, disponíveis para todos os clientes.",
+      "empty": "Nenhum canal oficial publicado ainda.",
+      "numbersHidden": "Os valores numéricos deste catálogo estão ocultos para o seu cliente."
+    },
+    "own": {
+      "title": "Seus canais",
+      "subtitle": "Canais privados criados pelo seu cliente (não aparecem para outros clientes)."
+    }
+  },
+  "diffusion": {
+    "title": "Difusão por canal",
+    "subtitle": "Crie eventos do estudo e simule como a exposição se espalha entre os agentes.",
+    "newEvent": "Novo evento",
+    "events": "Eventos",
+    "empty": "Nenhum evento criado ainda.",
+    "fields": {
+      "title": "Título",
+      "description": "Descrição",
+      "stimulus": "Estímulo",
+      "channel": "Canal",
+      "initialReach": "Alcance inicial",
+      "diffusionRate": "Taxa de difusão",
+      "steps": "Passos",
+      "channelHint": "Ao escolher um canal, os campos de alcance/taxa abaixo são preenchidos com os valores calibrados do canal — você ainda pode ajustá-los.",
+      "continuesFrom": "Continuar difusão de um evento anterior?",
+      "continuesFromNone": "Não — difusão independente (padrão)",
+      "continuesFromHint": "Modo de continuação: em vez de sortear um novo alcance inicial, este evento parte de quem já estava exposto no evento escolhido e continua espalhando a partir daí — útil para simular \"a mesma difusão, checada de novo mais tarde\"."
+    },
+    "diffuse": "Difundir",
+    "exposed": "Expostos",
+    "bySource": "Por origem",
+    "seed": "Semente",
+    "peer": "Pares",
+    "channel": "Canal",
+    "chartLabel": "Agentes expostos por passo",
+    "totalAgents": "Total de agentes",
+    "noStimuli": "Cadastre um estímulo no estudo antes de criar um evento.",
+    "channelNone": "Sem canal",
+    "timeline": {
+      "title": "Linha do tempo de difusão",
+      "subtitle": "Planeje quando cada execução acontece em relação ao início do estudo (D0) — uma pesquisa de base, um evento de difusão, uma pesquisa de acompanhamento depois.",
+      "dayZero": "D0",
+      "dayN": "D{n}",
+      "clickHint": "Clique na linha para criar uma execução nesse ponto",
+      "createHint": "Arraste um marcador para reagendar; clique em um ponto vazio para criar uma nova execução ali."
+    },
+    "opinions": {
+      "title": "Gerar opiniões",
+      "subtitle": "Transforma exposições em opiniões (sentimento, intenção de adoção) via LLM — passo separado e com custo.",
+      "estimate": "Estimar custo",
+      "generate": "Gerar (síncrono)",
+      "submitBatch": "Enviar em lote",
+      "pollBatch": "Checar status / importar",
+      "syncAdvanced": "Rodar síncrono em vez de lote (avançado, mais caro)",
+      "costLine": "{exposures} agentes expostos · síncrono: {sync} · lote: {batch}",
+      "statusLabel": "Status",
+      "count": "{n} opiniões",
+      "view": "Ver opiniões",
+      "hide": "Ocultar opiniões",
+      "empty": "Nenhuma opinião gerada ainda.",
+      "agentFallback": "Agente #{id}",
+      "columns": {
+        "agent": "Agente",
+        "sentiment": "Sentimento",
+        "adoptionIntent": "Intenção de adoção",
+        "stance": "Postura",
+        "willShare": "Vai compartilhar?",
+        "step": "Passo"
+      }
+    }
+  },
+  "diffusionCompare": {
+    "title": "Comparar opiniões",
+    "subtitle": "Compare as opiniões geradas em dois eventos de difusão — por exemplo, o mesmo público no D0 e no D+90.",
+    "backLabel": "Difusão",
+    "eventA": "Evento A (base)",
+    "eventB": "Evento B (comparação)",
+    "selectEvent": "Selecione um evento…",
+    "continuesFrom": "continua de: {label}",
+    "loadingOpinions": "Carregando opiniões…",
+    "pickBoth": "Selecione os dois eventos para comparar.",
+    "sameEvent": "Evento A e Evento B são o mesmo — selecione dois eventos diferentes (ex.: um evento e a continuação dele).",
+    "noOverlap": "Nenhum agente com opinião em ambos os eventos.",
+    "summary": {
+      "title": "Resumo",
+      "avgSentimentA": "Sentimento médio — A",
+      "avgSentimentB": "Sentimento médio — B",
+      "avgAdoptionA": "Intenção média — A",
+      "avgAdoptionB": "Intenção média — B",
+      "totalA": "Opiniões geradas — A",
+      "totalB": "Opiniões geradas — B",
+      "commonAgents": "Agentes em comum",
+      "newInB": "Novos em B (não estavam em A)",
+      "missingFromB": "Sumiram de A pra B",
+      "commonAgentsHint": "Só agentes expostos pela difusão geram opinião — nem sempre é a população toda. Numa continuação bem-formada, \"Sumiram de A pra B\" deve ser 0: B deveria carregar todo mundo de A e só adicionar gente nova.",
+      "chartLabel": "Sentimento e intenção médios por evento"
+    },
+    "table": {
+      "title": "Por agente",
+      "agent": "Agente",
+      "sentimentA": "Sentimento (A)",
+      "sentimentB": "Sentimento (B)",
+      "sentimentDelta": "Δ Sentimento",
+      "adoptionA": "Intenção (A)",
+      "adoptionB": "Intenção (B)",
+      "adoptionDelta": "Δ Intenção",
+      "stanceB": "Postura (B)",
+      "onlyIn": "Só em {label}"
+    }
+  },
+  "agentGrounding": {
+    "subtitle": "Perfil e estímulo usados para gerar esta resposta — recalculados sob demanda a partir da evidência do agente (nada disso é gravado por resposta).",
+    "agentFallback": "Agente #{id}",
+    "compiler": "Compilador",
+    "hash": "Hash",
+    "viewProfile": "Ver perfil",
+    "answer": "Resposta",
+    "profile": "Perfil do agente",
+    "sections": {
+      "knownFacts": "Fatos conhecidos",
+      "observedHistory": "Histórico observado",
+      "syntheticPriors": "Prioris sintéticas",
+      "currentMentalState": "Estado mental atual",
+      "currentStimulus": "Pergunta / estímulo apresentado"
+    }
+  },
+  "builder": {
+    "title": "Construtor de experimentos",
+    "subtitle": "Monte um experimento completo passo a passo, da pesquisa a um estudo em execução.",
+    "stepProgress": "Passo {current} de {total}",
+    "step1": "1. Pesquisa e estudo",
+    "step2": "2. População",
+    "step3": "3. Estímulo",
+    "step4": "4. Instrumento (opcional)",
+    "step5": "5. Execução",
+    "next": "Avançar",
+    "back": "Voltar",
+    "finish": "Concluir",
+    "done": "Concluído",
+    "createResearch": "Criar pesquisa",
+    "createStudy": "Criar estudo",
+    "pickPopulation": "Anexar população",
+    "addStimulus": "Adicionar estímulo",
+    "stimulusImage": "Imagem (opcional)",
+    "imageUnsupportedType": "Tipo de arquivo não suportado — use PNG, JPEG ou WebP.",
+    "addInstrument": "Criar instrumento",
+    "createRun": "Criar execução",
+    "freeze": "Congelar execução",
+    "execute": "Executar execução",
+    "goToRun": "Abrir execução",
+    "researchCreated": "Pesquisa criada.",
+    "studyCreated": "Estudo criado.",
+    "populationAttached": "População anexada.",
+    "stimulusAdded": "Estímulo adicionado.",
+    "instrumentCreated": "Instrumento criado.",
+    "runCreated": "Execução criada.",
+    "runFrozen": "Execução congelada.",
+    "skipInstrument": "Pular esta etapa",
+    "addItem": "Adicionar item",
+    "removeItem": "Remover",
+    "noPopulations": "Nenhuma população disponível para este país.",
+    "completeTitle": "Experimento pronto",
+    "completeSubtitle": "Sua execução está congelada e pronta para executar.",
+    "armSection": "Variante entre grupos / between-subjects (opcional)",
+    "armSectionHint": "Dê a mesma chave pra estímulos que são variantes de um mesmo fator — cada agente da execução é sorteado pra exatamente uma delas, de forma determinística a partir da seed da execução.",
+    "armSlotKey": "Chave da variante",
+    "armWeight": "Peso (vazio = proporção igual)",
+    "armSlotKeyPersists": "A chave de variante \"{key}\" continua preenchida pro próximo estímulo que você adicionar — limpe quando terminar esse grupo.",
+    "armSlotKeyClear": "Limpar",
+    "stimulusPlaceholderHint": "Inclua {'{'}{'{'}STIMULUS{'}'}{'}'} onde a variante atribuída ao agente deve aparecer, e use a mesma chave da variante (acima) como Chave do item.",
+    "conjointAttributes": "Atributos de conjoint (opcional)",
+    "addAttribute": "Adicionar atributo",
+    "attribute": "Atributo",
+    "attributeValue": "Valor",
+    "conjointAttributesHint": "Pra desenhos do tipo conjoint — escolha uma dimensão (ex.: preço) e um nível (ex.: R$ 9,90) que esse estímulo representa.",
+    "instrumentNotUsedForDiffusion": "Não é necessário nesse modo de exposição — estudos channel_diffusion configuram estímulo, canal e evento na aba Diffusion da execução.",
+    "completeTitleDiffusion": "Execução criada",
+    "completeSubtitleDiffusion": "Continue na aba Diffusion da execução pra escolher um canal, criar o evento e gerar as opiniões.",
+    "goToDiffusion": "Ir para Diffusion"
+  },
+  "status": {
+    "draft": "Rascunho",
+    "active": "Ativo",
+    "completed": "Concluído",
+    "archived": "Arquivado",
+    "generating": "Gerando",
+    "ready": "Pronto",
+    "error": "Erro",
+    "frozen": "Congelado",
+    "running": "Executando",
+    "done": "Concluído"
+  },
+  "aiAnalysis": {
+    "title": "Análise por IA",
+    "subtitle": {
+      "run": "Resumo desta execução — a IA só narra os módulos de análise já calculados abaixo.",
+      "study": "Resumo deste estudo, cruzando as execuções já sintetizadas.",
+      "research": "Síntese final da pesquisa — cruza todos os estudos e responde às perguntas de pesquisa."
+    },
+    "estimate": "Estimar custo",
+    "run": "Gerar análise",
+    "rerun": "Gerar de novo",
+    "running": "Gerando análise...",
+    "empty": "Nenhuma análise gerada ainda.",
+    "model": "Modelo",
+    "estTokens": "Tokens est.",
+    "estCost": "Custo est.",
+    "keyFindings": "Principais achados",
+    "caveats": "Ressalvas",
+    "questionAnswers": "Respostas às perguntas de pesquisa",
+    "computedWith": "Gerado com {model}",
+    "fidelity": {
+      "calibration": "Calibração (nível absoluto)",
+      "comparativeEffects": "Efeito comparativo",
+      "rankingDecision": "Ranking / decisão",
+      "status": {
+        "supported": "Suportado",
+        "not_supported": "Não suportado",
+        "mixed": "Misto",
+        "insufficient_evidence": "Evidência insuficiente"
+      }
+    },
+    "confidence": {
+      "high": "Alta confiança",
+      "medium": "Média confiança",
+      "low": "Baixa confiança"
+    },
+    "gate": {
+      "noRuns": "Este estudo não tem nenhuma execução ainda (ou todas estão excluídas) — nada pra sintetizar.",
+      "runsUnfinished": "Nem toda execução terminou ainda: {list}. Espere terminar ou exclua as que não quer considerar antes de gerar a síntese.",
+      "noStudies": "Esta pesquisa não tem nenhum estudo ainda — nada pra sintetizar.",
+      "studiesUnsynthesized": "Nem todo estudo tem sua própria síntese ainda: {list}. Gere a análise de IA de cada estudo primeiro."
+    }
+  },
+  "researchQuestions": {
+    "title": "Perguntas de pesquisa",
+    "subtitle": "O que você quer que a análise final responda, cruzando todos os estudos desta pesquisa.",
+    "add": "+ Adicionar pergunta",
+    "placeholder": "ex.: Entre as opções testadas, qual domina as demais e para quais segmentos?",
+    "empty": "Nenhuma pergunta de pesquisa cadastrada ainda."
+  },
+  "registry": {
+    "client_sector": {
+      "private": "Privado",
+      "public": "Público",
+      "ngo": "ONG",
+      "academic": "Acadêmico"
+    },
+    "membership_role": {
+      "owner": "Proprietário",
+      "admin": "Administrador",
+      "researcher": "Pesquisador",
+      "viewer": "Visualizador"
+    },
+    "exposure_mode": {
+      "direct_assignment": "Atribuição direta",
+      "direct_assignment_desc": "Todo agente vê o estímulo e responde direto — como uma pesquisa/survey tradicional. Use quando quer medir a reação da população inteira de uma vez, sem simular como a informação se espalha.",
+      "channel_diffusion": "Difusão por canal",
+      "channel_diffusion_desc": "O estímulo se espalha aos poucos pela população, entrando por um canal (rede social, TV, boato interno etc.) e passando de pessoa a pessoa. Só quem foi \"exposto\" forma opinião. Use para comparar canais de propagação ou medir adoção ao longo do tempo — o preço é a complexidade extra de configurar canal, alcance e taxa de difusão."
+    },
+    "synthesizer": {
+      "independent_quota_v1": "Cota independente (v1)",
+      "independent_quota_v1_desc": "Amostra cada atributo de forma independente por cotas marginais.",
+      "ipf_v1": "IPF (v1)",
+      "ipf_v1_desc": "Ajuste proporcional iterativo para casar distribuições conjuntas."
+    },
+    "axis_pack_category": {
+      "demographic": "Demográfico",
+      "socioeconomic": "Socioeconômico",
+      "behavioral": "Comportamental",
+      "geographic": "Geográfico",
+      "custom": "Personalizado"
+    },
+    "grounding_compiler": {
+      "generic_llm_v1": "LLM genérico (v1)",
+      "generic_llm_v1_desc": "Usa o LLM sem fundamentação adicional.",
+      "persona_demographic_v1": "Persona demográfica (v1)",
+      "persona_demographic_v1_desc": "Fundamenta cada agente em seus atributos demográficos.",
+      "persona_profile_v1": "Perfil de persona (v1)",
+      "persona_profile_v1_desc": "Fundamenta cada agente em toda a evidência disponível, de forma uniforme e sem proveniência.",
+      "population_grounded_v1": "Fundamentado na população (v1)",
+      "population_grounded_v1_desc": "Fundamenta as respostas na distribuição da população.",
+      "evidence_grounded_v1": "Fundamentado em evidências (v1)",
+      "evidence_grounded_v1_desc": "Fundamenta as respostas em evidências e benchmarks."
+    },
+    "item_type": {
+      "scale_0_10": "Escala 0–10",
+      "single_choice": "Escolha única",
+      "multiple_choice": "Escolha múltipla",
+      "open": "Resposta aberta",
+      "conjoint_profile_choice": "Escolha de perfil (conjoint)",
+      "conjoint_profile_choice_desc": "Apresenta perfis de estímulos para o agente escolher."
+    },
+    "analysis_module": {
+      "attribute_distribution": "Distribuição de atributos",
+      "attribute_distribution_desc": "Distribuição de valores por atributo na população.",
+      "representativeness_chi2": "Representatividade (χ²)",
+      "representativeness_chi2_desc": "Qui-quadrado de aderência da população observada às metas de referência.",
+      "adoption_summary": "Resumo de adoção",
+      "adoption_summary_desc": "Resume os resultados de adoção a partir das respostas.",
+      "segment_breakdown": "Detalhamento por segmento",
+      "segment_breakdown_desc": "Divide os resultados por segmentos da população.",
+      "response_fidelity_correlation": "Fidelidade de resposta (correlação)",
+      "response_fidelity_correlation_desc": "Correlação de Pearson entre o valor humano e o sintético por respondente.",
+      "decision_fidelity_winner": "Fidelidade de decisão (vencedor)",
+      "decision_fidelity_winner_desc": "Verifica se a população sintética escolhe o mesmo vencedor que os humanos.",
+      "bootstrap_robustness": "Robustez (bootstrap)",
+      "bootstrap_robustness_desc": "Intervalo de confiança por bootstrap do erro médio absoluto humano×sintético.",
+      "structural_drivers_eta2": "Direcionadores estruturais (eta²)",
+      "structural_drivers_eta2_desc": "Quanto da variância da resposta cada atributo explica (eta² ponderado).",
+      "amce_conjoint": "AMCE (conjoint)",
+      "amce_conjoint_desc": "Efeito marginal médio de cada valor de atributo sobre o resultado.",
+      "cross_profile": "Perfil cruzado",
+      "cross_profile_desc": "Cruza os dois atributos de maior eta² e mostra a taxa por célula combinada.",
+      "channel_segment_comparison": "Comparação de canais por segmento",
+      "channel_segment_comparison_desc": "Para cada segmento, qual canal produziu a melhor resposta de mercado (adoção).",
+      "treatment_effect_categorical": "Efeito de tratamento vs. controle (categórico)",
+      "treatment_effect_categorical_desc": "Compara o efeito deste braço sobre o controle (gap entre duas categorias) no humano vs. no sintético. Requer indicar a execução do braço-controle.",
+      "subgroup_heterogeneity_fidelity": "Heterogeneidade por subgrupo vs. humano",
+      "subgroup_heterogeneity_fidelity_desc": "Compara a distribuição humana vs. sintética do desfecho dentro de cada valor de um atributo do respondente (ex.: status vacinal).",
+      "conjoint_stimulus_amce": "AMCE de conjoint (atributo do estímulo)",
+      "conjoint_stimulus_amce_desc": "Efeito marginal médio de cada nível de atributo DO ESTÍMULO/PERFIL (ex.: eficácia, país de origem) sobre a chance de ser escolhido — diferente do AMCE por atributo do respondente.",
+      "conjoint_stimulus_amce_by_subgroup": "AMCE de conjoint por subgrupo",
+      "conjoint_stimulus_amce_by_subgroup_desc": "O mesmo AMCE de estímulo, calculado separadamente para cada valor de um atributo do respondente (ex.: partido) — testa interações como reversão partidária num atributo de endosso."
+    },
+    "chart_type": {
+      "bar": "Barras",
+      "grouped_bar": "Barras agrupadas",
+      "pie": "Pizza",
+      "table": "Tabela"
+    },
+    "llm_provider": {
+      "anthropic": "Anthropic",
+      "gemini": "Gemini",
+      "openai": "OpenAI"
+    }
+  }
+}
